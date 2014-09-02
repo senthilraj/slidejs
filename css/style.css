@@ -1,6 +1,0 @@
-*{ margin:0; padding:0;}
-ul{ list-style:none;}
-.container{ width:750px; margin:0 auto;}
-section{ width:100%; float:left;}
-#slide{ overflow:hidden; width:100%;}
-#slide li{ float:left;}
