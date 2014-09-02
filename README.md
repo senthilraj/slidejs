@@ -24,10 +24,10 @@ How to use
 ```html
 <div id="slide">
 					<ul>
-						<li><img src="images/1.jpg"</li>
-						<li><img src="images/2.jpg"</li>
-						<li><img src="images/3.jpg"</li>
-						<li><img src="images/4.jpg"</li>
+						<li><img src="images/1.jpg"></li>
+						<li><img src="images/2.jpg"></li>
+						<li><img src="images/3.jpg"></li>
+						<li><img src="images/4.jpg"></li>
 					</ul>
 </div>
 ```        
