@@ -4,3 +4,18 @@ ul{ list-style:none;}
 section{ width:100%; float:left;}
 #slide{ overflow:hidden; width:100%;}
 #slide li{ float:left;}
+.swing {
+  transition: 1s; 
+  transform: rotateY(180deg) !important;
+}
+.normal {
+   transform: rotateY(0deg);
+}
+
+.swing2 {
+  transition: .5s; 
+  transform: rotateY(180deg) !important;
+}
+.normal2 {
+   transform: rotateY(90deg);
+}
