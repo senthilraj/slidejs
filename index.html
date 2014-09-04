@@ -7,7 +7,23 @@
 	<body>
 		<section>
 			<div class="container">
+                            <h1 class="top_ele">Slidejs - free slider jquery plugin</h1>
+                            <a href="https://github.com/senthilraj/slidejs">Download</a>
+                            <h1>Swing slide - effect : "swing"</h1>
 				<div id="slide">
+					<ul>
+						<li><img src="images/image-slider-1.jpg"></li>
+						<li><img src="images/image-slider-2.jpg"></li>
+                                                <li><img src="images/image-slider-3.jpg"></li>
+                                                <li><img src="images/image-slider-4.jpg"></li>
+                                                <li><img src="images/image-slider-5.jpg"></li>
+                                                <li><img src="images/image-slider-6.png"></li>
+                                                <li><img src="images/image-slider-7.jpg"></li>
+                                                <li><img src="images/image-slider-8.jpg"></li>
+					</ul>
+				</div>
+                            <h1>Normal slide - effect : "normal", default effect</h1>
+                                <div id="slide_normal">
 					<ul>
 						<li><img src="images/image-slider-1.jpg"></li>
 						<li><img src="images/image-slider-2.jpg"></li>
@@ -25,6 +41,7 @@
 		<script src="js/slidejs.js"></script>
 		<script>
 			$("#slide").slidejs({ effect : "swing" });
+                        $("#slide_normal").slidejs();
 		</script>
 	</body>
 </html>
