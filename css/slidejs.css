@@ -1,10 +1,15 @@
 *{ margin:0; padding:0;}
 ul{ list-style:none;}
-.container{ width:71%; margin:0 auto;}
+body{ font-family: "arial"; font-size: 18px;}
+.container{ width:980px; margin:0 auto;}
 section{ width:100%; float:left;}
-#slide{ overflow:hidden; width:100%;}
-#slide li{ float:left;}
-#slide li img{ width: 100%; height: auto;}
+h1{  color: #404040; margin-top:60px; font-size: 18px; float: left; width:100%;}
+h1.top_ele{ margin-top:30px; font-size: 22px;}
+a{color: #404040; float: left;}
+#slide{  width:100%;}
+#slide_normal{ overflow:hidden; width:100%;}
+#slide li, #slide_normal li{ float:left;}
+#slide li img, #slide_normal li img{ width: 100%; height: auto;}
 .swing {
   transition: 1s; 
   transform: rotateY(180deg) !important;
