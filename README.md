@@ -42,8 +42,8 @@ How to use
 ```html
 $("#slide").slidejs({speed : 7000, effect : "swing"});
 ```
--effect : "normal" - It is normal slide effect, move image right to left, it is default effect.
--effect : "swing" - It is image rotate effect.
+1)effect : "normal" - It is normal slide effect, move image right to left, it is default effect.
+2)effect : "swing" - It is image rotate effect.
 
 ## Demo
 
