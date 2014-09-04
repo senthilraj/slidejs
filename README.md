@@ -40,8 +40,10 @@ How to use
 
 - if you want to set speed slider, then call method like below:
 ```html
-$("#slide").slidejs({speed : 7000, slide_speed : 900});
+$("#slide").slidejs({speed : 7000, effect : "swing"});
 ```
+effect : "normal" - It is normal slide effect, move image right to left, it is default effect.
+effect : "swing" - It is image rotate effect.
 
 ## Demo
 
