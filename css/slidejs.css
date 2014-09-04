@@ -1,9 +1,10 @@
 *{ margin:0; padding:0;}
 ul{ list-style:none;}
-.container{ width:750px; margin:0 auto;}
+.container{ width:71%; margin:0 auto;}
 section{ width:100%; float:left;}
 #slide{ overflow:hidden; width:100%;}
 #slide li{ float:left;}
+#slide li img{ width: 100%; height: auto;}
 .swing {
   transition: 1s; 
   transform: rotateY(180deg) !important;
@@ -18,4 +19,22 @@ section{ width:100%; float:left;}
 }
 .normal2 {
    transform: rotateY(90deg);
+}
+
+.swing3 {
+  transition: 1s; 
+  transform: rotateY(360deg) !important;
+}
+
+.normal3 {
+   transform: rotateY(270deg);
+}
+
+.swing4 {
+  transition: .5s; 
+  transform: rotateY(360deg) !important;
+}
+
+.normal4 {
+   transform: rotateY(270deg);
 }

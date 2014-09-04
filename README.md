@@ -50,7 +50,7 @@ $("#slide").slidejs({speed : 7000, slide_speed : 900});
 
 ## Download
 
-### Download [SideJs zip archive](https://github.com/senthilraj/slidejs/archive/master.zip)
+### Download [SlideJs zip archive](https://github.com/senthilraj/slidejs/archive/master.zip)
 
 
 About me

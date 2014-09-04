@@ -19,9 +19,11 @@
 			var count=1;
                         if(settings.effect == "normal")
                             {
+                                var img_hei = ele.find("img").height();
+                                ele.css({"height":img_hei+"px"});
+                                ele.css({"width":img_wid+"px"})
                                 ele.find("ul").css({"width":parent_wid+"px", "position":"relative", "left":"0px"});
                                 setInterval(function(){
-                                        //alert(); 
                                         if(count<img_len)
                                         {
                                         ele.find("ul").animate( { left: "-"+count*img_wid+"px"}, settings.slide_speed);
@@ -36,56 +38,60 @@
                             }
                         else if(settings.effect == "swing")
                         {
-                            
-                            ele.find("ul").css({"position":"relative", "width": img_wid+"px", "perspective" : img_wid+"px",});
                             ele.find("ul img").hide();
                             var count = 0;
                             var count_inc = 0;
                             ele.find("ul img").eq(count).show();
                             setInterval(function(){
-                                    //alert();
-                                    count_inc = count+1;
-                                if(count<img_len-1)
+                                count_inc = count+1;
+                                if(count<img_len-1 && count == 0)
+                                {
+                                   ele.find("ul img").eq(count).show();
+                                    setTimeout(function(){
+                                        ele.find("ul img").eq(count).addClass("swing");
+                                        ele.find("ul img").eq(count).addClass("normal");
+                                    },100);
+                                    setTimeout(function(){
+                                        ele.find("ul img").eq(count_inc).addClass("normal2");
+                                        ele.find("ul img").eq(count_inc).show();
+                                        ele.find("ul img").eq(count).hide();
+                                        ele.find("ul img").eq(count_inc).addClass("swing2");
+                                        count++;
+                                    },400); 
+                                }    
+                                else if(count<img_len-1 && count != 0)
                                 {
                                 ele.find("ul img").hide();
-                                ele.find("ul img").removeClass();
+                                ele.find("ul img").eq(0).removeClass();
                                 ele.find("ul img").eq(count).show();
-                                ele.find("ul img").eq(count).addClass("swing");
-                                ele.find("ul img").eq(count).addClass("normal");
                                 setTimeout(function(){
-                                    console.log(count);
+                                    ele.find("ul img").eq(count).addClass("swing3");
+                                    ele.find("ul img").eq(count).addClass("normal");
+                                },100);
+                                setTimeout(function(){
                                     ele.find("ul img").eq(count_inc).addClass("normal2");
                                     ele.find("ul img").eq(count_inc).show();
                                     ele.find("ul img").eq(count).hide();
                                     ele.find("ul img").eq(count_inc).addClass("swing2");
                                     count++;
-                                },300);
-                                
+                                },400);
                                 }
-                                    else{
-                                        console.log(count_inc);
+                                else{
+                                        ele.find("ul img").eq(count).removeClass();
+                                        ele.find("ul img").eq(count).addClass("swing3");
+                                        ele.find("ul img").eq(count).addClass("normal");
+                                        var old_count = count;
                                         count = 0;
-                                        ele.find("ul img").eq(count).addClass("normal2");
+                                        setTimeout(function(){
+                                        ele.find("ul img").eq(count).addClass("normal4");
                                         ele.find("ul img").eq(count).show();
-                                        ele.find("ul img").eq(count_inc-1).hide();
-                                        ele.find("ul img").eq(count).addClass("swing2");
-                                                
-                                                
-                                        }
-                                /*setTimeout(function(){
-                                    ele.find("ul img").eq(0).removeClass();
-                                     ele.find("ul img").eq(1).removeClass("normal2");
-                                   //alerT();
-                                   // ele.find("ul img").eq(1).addClass("swing");
-                                    // ele.find("ul img").eq(1).addClass("normal");
-                                    setTimeout(function(){
-                                        ele.find("ul img").eq(1).hide();
-                                        ele.find("ul img").eq(0).addClass("swing");
-                                        ele.find("ul img").eq(0).show();
-                                        ele.find("ul img").eq(0).addClass("normal");
-                                     },400);
-                                },3500);*/
-
+                                        ele.find("ul img").eq(old_count).hide();
+                                        ele.find("ul img").eq(count).addClass("swing4");
+                                        },300);
+                                        setTimeout(function(){
+                                            ele.find("ul img").removeClass();       
+                                        },3000);        
+                                    }
                                 }, settings.speed);
                         }
 		});
